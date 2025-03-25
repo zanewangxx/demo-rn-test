@@ -29,6 +29,7 @@ export function HelloWave() {
       <ThemedText style={styles.text}>👋</ThemedText>
     </Animated.View>
   );
+  //test
 }
 
 const styles = StyleSheet.create({

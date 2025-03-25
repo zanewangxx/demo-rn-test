@@ -1,0 +1,9 @@
+[
+    "components/Collapsible.tsx",
+    "components/ExternalLink.tsx",
+    "components/HapticTab.tsx",
+    "components/HelloWave.tsx",
+    "components/ParallaxScrollView.tsx",
+    "components/ThemedText.tsx",
+    "components/ThemedView.tsx"
+]
