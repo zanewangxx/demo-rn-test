@@ -21,11 +21,9 @@ export async function prompter(inquirer, commit) {
     
     // If have a config file, check against it:
     const modifiedGlobalFiles = stagedFiles.filter(file =>
-      globalFilesConfig.length
-        ? globalFilesConfig.includes(file)
-        : (file.includes('/global/') || file.startsWith('src/global/'))
+      globalFilesConfig.includes(file)
     );
-    
+
     if (modifiedGlobalFiles.length > 0) {
       console.log('Detected changes in global files:');
       console.log(modifiedGlobalFiles.join('\n'));
@@ -68,7 +66,7 @@ export async function prompter(inquirer, commit) {
   inquirer.prompt(questions).then(answers => {
     // Format the commit message as desired.
     // This is a simple example.
-    const commitMessage = `${answers.type}: ${answers.subject || ''}`.trim();
+    const commitMessage = `⚠️ ${answers.type}: ${answers.subject || ''}`.trim();
     commit(commitMessage);
   });
 }
